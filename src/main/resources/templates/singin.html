@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Login page</title>
+    <title>Sign in page</title>
     <meta charset="utf-8" />
     <style>
         header .header{
@@ -91,7 +91,7 @@
     <div class="form">
         <div class="singin">
             <div class="singin-header">
-                <h3>SING IN</h3>
+                <h3>SIGN IN</h3>
                 <p>Please enter your credentials to register.</p>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 <p th:errors = "*{password}" class="text-danger" th:if="${#fields.hasErrors('password')}"></p>
             </div>
 
-            <input type="submit" value="Sing in" />
+            <input type="submit" value="Sign in" />
             <p class="message">Already registered? <a th:href="@{/login.html}">Log in to an account</a></p>
         </form>
     </div>

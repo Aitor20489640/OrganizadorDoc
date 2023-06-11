@@ -22,9 +22,9 @@ import java.util.List;
  * Application home page and login.
  */
 @Controller
-public class MainController {
+public class UsersController {
 
-    Logger logger = LoggerFactory.getLogger(MainController.class);
+    Logger logger = LoggerFactory.getLogger(UsersController.class);
 
     @Autowired
     public UsuarioService usuarioService;

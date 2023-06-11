@@ -30,12 +30,13 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll()
                                 .requestMatchers("/index").permitAll()
+                                .requestMatchers("/dashboard").authenticated()
                                 .requestMatchers("/users").authenticated()
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
-                                .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/users")
+                                .successForwardUrl("/dashboard")
+                                .defaultSuccessUrl("/dashboard")
                                 .permitAll()
                 ).logout(
                         logout -> logout
