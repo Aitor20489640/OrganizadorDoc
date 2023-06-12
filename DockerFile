@@ -1,0 +1,5 @@
+FROM eclipse-temurin:17-jdk-jammy
+VOLUME /srv/dev-disk-by-uuid-be895b93-58f0-40bf-97ba-5c4ff5c6166e/Java-Proyect/OrganizadorDoc
+EXPOSE 8090
+COPY /out/artifacts/OrganizadorDoc_jar/OrganizadorDoc.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
