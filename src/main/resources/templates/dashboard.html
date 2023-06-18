@@ -14,14 +14,16 @@
   <div class="container">
     <div class="row mb-3 text-center">
       <div class="col-second themed-grid-col text-center"><h1>DashBoard</h1></div>
-      <div class="themed-grid-col "><a th:href="@{/logout}" class="btn btn-primary btn-sm mb-3" >Logout</a></div>
+      <div class="col-md-4 themed-grid-col"><a th:href="@{/nuevo/libro}" class="btn btn-primary btn-sm mb-3" >Nuevo Libro</a></div>
+      <div class="col-md-4 themed-grid-col"><a th:href="@{/nuevo/audio-libro}" class="btn btn-primary btn-sm mb-3" >Nuevo Audio-Libro</a></div>
+      <div class="col-md-4 themed-grid-col"><a th:href="@{/logout}" class="btn btn-primary btn-sm mb-3" >Logout</a></div>
     </div>
 
   </div>
 
   <div th:if="${objetos.size() == 0}" class="alert alert-success alert-dismissible fade show text-center message"
        role="alert">
-    No se han encontrado usuarios
+    No se han encontrado Objetos
     <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Cerrar">
       <span aria-hidden="true">×</span>
     </button>

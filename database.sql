@@ -12,7 +12,7 @@ create table AUDIO_LIBRO
 
 create table LIBRO
 (
-    ID           BIGINT                 not null
+    ID           BIGINT auto_increment
         primary key,
     CURRENT_PAGE INTEGER                not null,
     IS_PHYSIC    BOOLEAN                not null,
@@ -90,6 +90,6 @@ INSERT INTO ROLES (NAME) VALUES ('ROLE_USER');
 
 INSERT INTO USUARIO (PASSWORD, USERNAME) VALUES ('$2a$10$7Uejg1fuzPvrVbAa3Mw25O3nSmqpwScpMvTs0zYAhHfXqOMQsIxTu', 'aitor');
 
-INSERT INTO PUBLIC.USER_ROLES (USER_ID, ROLE_ID) VALUES (4, 1);
+INSERT INTO USER_ROLES (USER_ID, ROLE_ID) VALUES (4, 1);
 
 

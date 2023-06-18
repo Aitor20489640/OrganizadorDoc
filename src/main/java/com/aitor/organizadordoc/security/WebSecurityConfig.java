@@ -29,13 +29,14 @@ public class WebSecurityConfig {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll()
-                                .requestMatchers("/index").permitAll()
-                                .requestMatchers("/dashboard").authenticated()
-                                .requestMatchers("/users").authenticated()
+                                .requestMatchers("/nuevo/**").hasRole("USER")
+                                .requestMatchers("/save/**").hasRole("USER")
+                                .requestMatchers("/dashboard").hasRole("USER")
+                                .requestMatchers("/users").hasRole("USER")
                 ).formLogin(
                         form -> form
                                 .loginPage("/login")
-                                .successForwardUrl("/dashboard")
+                                .loginProcessingUrl("/login")
                                 .defaultSuccessUrl("/dashboard")
                                 .permitAll()
                 ).logout(
